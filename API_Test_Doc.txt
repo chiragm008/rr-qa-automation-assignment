@@ -30,7 +30,7 @@ Verify API returns 400 Bad Request for invalid query parameters.
 Validate response JSON structure matches the expected TMDB schema.
 Validate required fields exist in every result (e.g., id, title, overview, genre_ids).
 
-3. Pagination Tests
+2. Pagination Tests
 
 Verify page=1 returns results.
 Verify page=n returns correct page number.
@@ -39,19 +39,19 @@ Verify invalid page values (page=-1, page=10000).
 Validate total_pages and total_results exist.
 Verify navigating through pages returns different content.
 
-4. API Key Tests (-ve)
+3. API Key Tests (-ve)
 
 Verify response when API key is empty.
 Verify response when API key has special characters.
 
-5. Sorting Tests (For discover APIs)
+4. Sorting Tests (For discover APIs)
 
 discover_newest: Validate results are sorted by release_date descending.
 discover_top_rated: Validate results are sorted by vote_average descending.
 discover_trend: Validate results are sorted by vote_count descending.
 discover_popular: Validate results are sorted by popularity descending.
 
-6. Filter Tests (for discover APIs)
+5. Filter Tests (for discover APIs)
 Year Range Filters
     Validate filtering works for release_date.gte lower bound.
     Validate filtering works for release_date.lte upper bound.
@@ -64,7 +64,7 @@ Genre Filters
     Validate with_genres=28 only returns movies with genre 28 (Action).
     Validate invalid genre returns empty list.
 
-7. Specific API Functional Tests
+6. Specific API Functional Tests
 A. MOVIE APIs
 popular_movie
     Validate movies are sorted by popularity (descending).
@@ -100,14 +100,14 @@ search_tv
     Validate shows matching valid query appear.
     Validate empty results for invalid search text.
 
-8. Search Tests
+7. Search Tests
 
 Search with numeric query.
 Search with special characters.
 Search with mixed case text.
 Search with empty string - No search/ data
 
-12. Negative Tests
+8. Negative Tests
 
 Remove page parameter.
 Use extremely large numeric values.
@@ -117,10 +117,10 @@ Use special characters in page number (page="@&!")
 Bugs / Tests Failing
 ----------------------------------------------------------------------
 
-Page Refresh gives error.
-Popular movie - Max page count is invalid/ throws error.
-Top Rated movie - Max page count is invalid/ throws error.
-Newest Movie - Max Page count shows higher upon adding rating filter (errored upon clicking)
-Data integrity: Popular vs Trending data sets for overlap.
-Data integrity: Top Rated vs Discover/Search(with genre) Top Rated results are mismatching.
-Validate sort consistency across multiple calls.
+-Page Refresh gives error.
+-Popular movie - Max page count is invalid/ throws error.
+-Top Rated movie - Max page count is invalid/ throws error.
+-Newest Movie - Max Page count shows higher upon adding rating filter (errored upon clicking)
+-Data integrity: Popular vs Trending data sets for overlap.
+-Data integrity: Top Rated vs Discover/Search(with genre) Top Rated results are mismatching.
+-Validate sort consistency across multiple calls.
