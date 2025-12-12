@@ -1,3 +1,6 @@
+----------------------------------------------------------------------
+API's Fetched from Browser
+----------------------------------------------------------------------
 popular_movie = "https://api.themoviedb.org/3/movie/popular?page=1&api_key=add494e96808c55b3ee7f940c9d5e5b6"
 trending_movie = "https://api.themoviedb.org/3/trending/movie/week?page=1&api_key=add494e96808c55b3ee7f940c9d5e5b6"
 newest_movie = "https://api.themoviedb.org/3/movie/now_playing?page=1&api_key=add494e96808c55b3ee7f940c9d5e5b6"
@@ -12,3 +15,112 @@ discover_newest = " https://api.themoviedb.org/3/discover/movie?sort_by=release_
 discover_top_rated = " https://api.themoviedb.org/3/discover/movie?sort_by=vote_average.desc&release_date.gte=1900-01-01&release_date.lte=2025-12-31&vote_average.gte=0&vote_average.lte=5&page=1&with_genres=28&api_key=add494e96808c55b3ee7f940c9d5e5b6"
 discover_trend = " https://api.themoviedb.org/3/discover/movie?sort_by=vote_count.desc&release_date.gte=1900-01-01&release_date.lte=2025-12-31&vote_average.gte=0&vote_average.lte=5&page=1&with_genres=28&api_key=add494e96808c55b3ee7f940c9d5e5b6"
 discover_popular = " https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&release_date.gte=1900-01-01&release_date.lte=2025-12-31&vote_average.gte=0&vote_average.lte=5&page=1&with_genres=28&api_key=add494e96808c55b3ee7f940c9d5e5b6"
+
+
+----------------------------------------------------------------------
+Test Scenarios
+----------------------------------------------------------------------
+1. General Tests (Applicable to ALL APIs)
+
+Verify API returns 200 OK for a valid request.
+Verify API returns 401 Unauthorized when API key is missing.
+Verify API returns 401 Unauthorized when API key is invalid.
+Verify API returns 404 Not Found for invalid endpoint.
+Verify API returns 400 Bad Request for invalid query parameters.
+Validate response JSON structure matches the expected TMDB schema.
+Validate required fields exist in every result (e.g., id, title, overview, genre_ids).
+
+3. Pagination Tests
+
+Verify page=1 returns results.
+Verify page=n returns correct page number.
+Verify page 0 returns error (boundaries).
+Verify invalid page values (page=-1, page=10000).
+Validate total_pages and total_results exist.
+Verify navigating through pages returns different content.
+
+4. API Key Tests (-ve)
+
+Verify response when API key is empty.
+Verify response when API key has special characters.
+
+5. Sorting Tests (For discover APIs)
+
+discover_newest: Validate results are sorted by release_date descending.
+discover_top_rated: Validate results are sorted by vote_average descending.
+discover_trend: Validate results are sorted by vote_count descending.
+discover_popular: Validate results are sorted by popularity descending.
+
+6. Filter Tests (for discover APIs)
+Year Range Filters
+    Validate filtering works for release_date.gte lower bound.
+    Validate filtering works for release_date.lte upper bound.
+    Validate invalid date format returns error.
+Rating Filters
+    Validate vote_average.gte applied correctly.
+    Validate vote_average.lte applied correctly.
+    Validate invalid values (e.g., rating = 100).
+Genre Filters
+    Validate with_genres=28 only returns movies with genre 28 (Action).
+    Validate invalid genre returns empty list.
+
+7. Specific API Functional Tests
+A. MOVIE APIs
+popular_movie
+    Validate movies are sorted by popularity (descending).
+    Validate results contain popular movies as per popularity.
+
+trending_movie
+    Validate trending movies appear in the list.
+    Validate results has trending movie/week.
+
+newest_movie
+    Validate newly released movies appear.
+    Validate recent release dates.
+
+top_rated_movie
+    Validate high rated movies appear.
+    Validate vote_average sorted descending.
+
+search_movie
+    Validate movies matching for valid query are present.
+    Validate search returns empty list for random/invalid query.
+    Validate error with special character queries (e.g., "!@#&").
+
+B. TV APIs
+popular_tv
+    Validate TV shows sorted by popularity.
+trending_tv
+    Validate trending shows appear in the list.
+newest_tv
+    Validate now playing/live shows appear.
+top_rated_tv
+    Validate top-rated TV results sorted correctly.
+search_tv
+    Validate shows matching valid query appear.
+    Validate empty results for invalid search text.
+
+8. Search Tests
+
+Search with numeric query.
+Search with special characters.
+Search with mixed case text.
+Search with empty string - No search/ data
+
+12. Negative Tests
+
+Remove page parameter.
+Use extremely large numeric values.
+Use special characters in page number (page="@&!")
+
+----------------------------------------------------------------------
+Bugs / Tests Failing
+----------------------------------------------------------------------
+
+Page Refresh gives error.
+Popular movie - Max page count is invalid/ throws error.
+Top Rated movie - Max page count is invalid/ throws error.
+Newest Movie - Max Page count shows higher upon adding rating filter (errored upon clicking)
+Data integrity: Popular vs Trending data sets for overlap.
+Data integrity: Top Rated vs Discover/Search(with genre) Top Rated results are mismatching.
+Validate sort consistency across multiple calls.
