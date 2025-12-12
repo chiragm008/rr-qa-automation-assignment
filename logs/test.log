@@ -1,0 +1,108 @@
+2025-12-12 02:18:01,476 | INFO | Validating Status Code 200 for popular movies
+2025-12-12 02:18:01,476 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:02,016 | INFO | Response Code: 200
+2025-12-12 02:18:02,017 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg","genre_ids":[16,35,12,10751,9648],"id":1084242,"original_language":"en","original_title":"Zootopia 2","overview":"After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts o
+2025-12-12 02:18:02,020 | INFO | Checking response structure for popular movies
+2025-12-12 02:18:02,020 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:02,593 | INFO | Response Code: 200
+2025-12-12 02:18:02,595 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg","genre_ids":[16,35,12,10751,9648],"id":1084242,"original_language":"en","original_title":"Zootopia 2","overview":"After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts o
+2025-12-12 02:18:02,599 | INFO | Validating fields of first movie item
+2025-12-12 02:18:02,599 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:03,106 | INFO | Response Code: 200
+2025-12-12 02:18:03,106 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg","genre_ids":[16,35,12,10751,9648],"id":1084242,"original_language":"en","original_title":"Zootopia 2","overview":"After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts o
+2025-12-12 02:18:03,110 | INFO | Testing search with invalid query returns empty list
+2025-12-12 02:18:03,110 | INFO | GET Request → URL: https://api.themoviedb.org/3/search/movie PARAMS: {'query': 'xyzinvalid123', 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:03,788 | INFO | Response Code: 200
+2025-12-12 02:18:03,789 | INFO | Response Body: {"page":1,"results":[],"total_pages":1,"total_results":0}
+2025-12-12 02:18:03,793 | INFO | Testing invalid API key scenario
+2025-12-12 02:18:04,161 | INFO | Testing missing API key scenario
+2025-12-12 02:18:04,465 | INFO | Testing invalid page number
+2025-12-12 02:18:04,466 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': -5, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:05,075 | INFO | Response Code: 400
+2025-12-12 02:18:05,075 | INFO | Response Body: {"success":false,"status_code":22,"status_message":"Invalid page: Pages start at 1 and max at 500. They are expected to be an integer."}
+2025-12-12 02:18:05,079 | INFO | Testing invalid endpoint
+2025-12-12 02:18:47,333 | INFO | Validating Status Code 200 for popular movies
+2025-12-12 02:18:47,334 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:47,703 | INFO | Checking response structure for popular movies
+2025-12-12 02:18:47,703 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:48,026 | INFO | Validating fields of first movie item
+2025-12-12 02:18:48,027 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:48,346 | INFO | Testing search with invalid query returns empty list
+2025-12-12 02:18:48,347 | INFO | GET Request → URL: https://api.themoviedb.org/3/search/movie PARAMS: {'query': 'xyzinvalid123', 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:49,032 | INFO | Response Code: 200
+2025-12-12 02:18:49,033 | INFO | Response Body: {"page":1,"results":[],"total_pages":1,"total_results":0}
+2025-12-12 02:18:49,037 | INFO | Testing invalid API key scenario
+2025-12-12 02:18:49,372 | INFO | Testing missing API key scenario
+2025-12-12 02:18:49,934 | INFO | Testing invalid page number
+2025-12-12 02:18:49,934 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': -5, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 02:18:50,852 | INFO | Response Code: 400
+2025-12-12 02:18:50,852 | INFO | Response Body: {"success":false,"status_code":22,"status_message":"Invalid page: Pages start at 1 and max at 500. They are expected to be an integer."}
+2025-12-12 02:18:50,854 | INFO | Testing invalid endpoint
+2025-12-12 12:22:05,109 | INFO | Testing discover endpoint
+2025-12-12 12:22:05,109 | INFO | GET Request → URL: https://api.themoviedb.org/3/discover/movie PARAMS: {'sort_by': 'release_date.desc', 'release_date.gte': '1900-01-01', 'release_date.lte': '2025-12-31', 'vote_average.gte': 0, 'vote_average.lte': 5, 'page': 1, 'with_genres': 28, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:11,437 | INFO | Response Code: 200
+2025-12-12 12:22:11,438 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":null,"genre_ids":[28,35],"id":1591358,"original_language":"en","original_title":"Phantom of the Dojo","overview":"Drew's dad owns a dojo. She's a pretty good boxer... her boyfriend, Freddie, isn't so the two sneak a practice in after hours. Drew's a tough girl but tonight she broke down into a million pieces. She became the punching bag... to thin air? Distraught she runs away and drops her keys in the process. Freddie picks them up and hides t
+2025-12-12 12:22:11,445 | INFO | Testing discover endpoint
+2025-12-12 12:22:11,445 | INFO | GET Request → URL: https://api.themoviedb.org/3/discover/movie PARAMS: {'sort_by': 'release_date.desc', 'release_date.gte': '1900-01-01', 'release_date.lte': '2025-12-31', 'vote_average.gte': 0, 'vote_average.lte': 5, 'page': 1, 'with_genres': 28, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:12,509 | INFO | Response Code: 200
+2025-12-12 12:22:12,509 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":null,"genre_ids":[28,35],"id":1591358,"original_language":"en","original_title":"Phantom of the Dojo","overview":"Drew's dad owns a dojo. She's a pretty good boxer... her boyfriend, Freddie, isn't so the two sneak a practice in after hours. Drew's a tough girl but tonight she broke down into a million pieces. She became the punching bag... to thin air? Distraught she runs away and drops her keys in the process. Freddie picks them up and hides t
+2025-12-12 12:22:12,511 | INFO | Testing discover endpoint
+2025-12-12 12:22:12,512 | INFO | GET Request → URL: https://api.themoviedb.org/3/discover/movie PARAMS: {'sort_by': 'popularity.desc', 'release_date.gte': '1900-01-01', 'release_date.lte': '2025-12-31', 'vote_average.gte': 0, 'vote_average.lte': 5, 'page': 1, 'with_genres': 28, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:13,290 | INFO | Response Code: 200
+2025-12-12 12:22:13,292 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/wE1TZtB5G1fdiln3PPnnLhExuCz.jpg","genre_ids":[28,53,80],"id":1296504,"original_language":"en","original_title":"Stand Your Ground","overview":"Former Special Forces operative, Jack Johnson, uses the Stand Your Ground law to seek vengeance for his wife’s murder, igniting a brutal war against a local crime lord’s family and ending in an explosive showdown.","popularity":35.5011,"poster_path":"/vKB59pPIYvjRxxEXoRoyUfaiBoD.jpg","release_date":"20
+2025-12-12 12:22:49,415 | INFO | Testing pagination for /movie/popular
+2025-12-12 12:22:49,418 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:50,057 | INFO | Response Code: 200
+2025-12-12 12:22:50,058 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg","genre_ids":[16,35,12,10751,9648],"id":1084242,"original_language":"en","original_title":"Zootopia 2","overview":"After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts o
+2025-12-12 12:22:50,059 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 2, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:51,770 | INFO | Response Code: 200
+2025-12-12 12:22:51,771 | INFO | Response Body: {"page":2,"results":[{"adult":false,"backdrop_path":"/hpXBJxLD2SEf8l2CspmSeiHrBKX.jpg","genre_ids":[18,14,27],"id":1062722,"original_language":"en","original_title":"Frankenstein","overview":"Dr. Victor Frankenstein, a brilliant but egotistical scientist, brings a creature to life in a monstrous experiment that ultimately leads to the undoing of both the creator and his tragic creation.","popularity":106.9999,"poster_path":"/g4JtvGlQO7DByTI6frUobqvSL3R.jpg","release_date":"2025-10-17","title":"F
+2025-12-12 12:22:51,777 | INFO | Testing pagination for /trending/movie/week
+2025-12-12 12:22:51,777 | INFO | GET Request → URL: https://api.themoviedb.org/3/trending/movie/week PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:52,470 | INFO | Response Code: 200
+2025-12-12 12:22:52,471 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/kfXgo2rMF1A19celCwLyQ4Xwpf8.jpg","id":1218925,"title":"Chainsaw Man - The Movie: Reze Arc","original_title":"劇場版 チェンソーマン レゼ篇","overview":"In a brutal war between devils, hunters, and secret enemies, a mysterious girl named Reze has stepped into Denji's world, and he faces his deadliest battle yet, fueled by love in a world where survival knows no rules.","poster_path":"/pHyxb2RV5wLlboAwm9ZJ9qTVEDw.jpg","media_type":"movie","original_language"
+2025-12-12 12:22:52,472 | INFO | GET Request → URL: https://api.themoviedb.org/3/trending/movie/week PARAMS: {'page': 2, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:55,666 | INFO | Response Code: 200
+2025-12-12 12:22:55,667 | INFO | Response Body: {"page":2,"results":[{"adult":false,"backdrop_path":"/jlGmlFOcfo8n5tURmhC7YVd4Iyy.jpg","id":436969,"title":"The Suicide Squad","original_title":"The Suicide Squad","overview":"Supervillains Harley Quinn, Bloodsport, Peacemaker and a collection of nutty cons at Belle Reve prison join the super-secret, super-shady Task Force X as they are dropped off at the remote, enemy-infused island of Corto Maltese.","poster_path":"/q61qEyssk2ku3okWICKArlAdhBn.jpg","media_type":"movie","original_language":"en"
+2025-12-12 12:22:55,671 | INFO | Testing pagination for /movie/now_playing
+2025-12-12 12:22:55,671 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/now_playing PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:58,672 | INFO | Response Code: 200
+2025-12-12 12:22:58,673 | INFO | Response Body: {"dates":{"maximum":"2025-12-17","minimum":"2025-11-05"},"page":1,"results":[{"adult":false,"backdrop_path":"/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg","genre_ids":[16,35,12,10751,9648],"id":1084242,"original_language":"en","original_title":"Zootopia 2","overview":"After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down. To crack the case, Ju
+2025-12-12 12:22:58,673 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/now_playing PARAMS: {'page': 2, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:22:59,300 | INFO | Response Code: 200
+2025-12-12 12:22:59,301 | INFO | Response Body: {"dates":{"maximum":"2025-12-17","minimum":"2025-11-05"},"page":2,"results":[{"adult":false,"backdrop_path":"/7FDVhmCur4LMOfnXMteiSCtsdOb.jpg","genre_ids":[28,12,14],"id":1116465,"original_language":"zh","original_title":"传说","overview":"An archeologist noticed that the texture of the relics discovered during the excavation of a glacier closely resembled a jade pendant seen in one of his dreams. He and his team then embark on an expedition into the depths of the glacier.","popularity":71.2405,"p
+2025-12-12 12:22:59,308 | INFO | Testing pagination for /movie/top_rated
+2025-12-12 12:22:59,308 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/top_rated PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:23:00,331 | INFO | Response Code: 200
+2025-12-12 12:23:00,332 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg","genre_ids":[18,80],"id":278,"original_language":"en","original_title":"The Shawshank Redemption","overview":"Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- i
+2025-12-12 12:23:00,333 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/top_rated PARAMS: {'page': 2, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:23:03,100 | INFO | Response Code: 200
+2025-12-12 12:23:03,102 | INFO | Response Body: {"page":2,"results":[{"adult":false,"backdrop_path":"/hZkgoQYus5vegHoetLkCJzb17zJ.jpg","genre_ids":[18,53],"id":550,"original_language":"en","original_title":"Fight Club","overview":"A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \"fight clubs\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.","popularity":16.54
+2025-12-12 12:51:22,448 | INFO | Testing pagination for /movie/popular
+2025-12-12 12:51:22,448 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:26,666 | INFO | Response Code: 200
+2025-12-12 12:51:26,668 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg","genre_ids":[16,35,12,10751,9648],"id":1084242,"original_language":"en","original_title":"Zootopia 2","overview":"After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down. To crack the case, Judy and Nick must go undercover to unexpected new parts o
+2025-12-12 12:51:26,668 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/popular PARAMS: {'page': 10, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:28,938 | INFO | Response Code: 200
+2025-12-12 12:51:28,939 | INFO | Response Body: {"page":10,"results":[{"adult":false,"backdrop_path":"/kHOfxq7cMTXyLbj0UmdoGhT540O.jpg","genre_ids":[878,28,35],"id":507244,"original_language":"en","original_title":"Afterburn","overview":"Set against the backdrop of a postapocalyptic Earth whose Eastern Hemisphere was destroyed by a massive solar flare, leaving what life remains mutated from radiation and fallout. The story revolves around a group of treasure hunters who extract such objects as the Mona Lisa, the Rosetta Stone and the Crown Je
+2025-12-12 12:51:28,947 | INFO | Testing pagination for /trending/movie/week
+2025-12-12 12:51:28,947 | INFO | GET Request → URL: https://api.themoviedb.org/3/trending/movie/week PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:30,296 | INFO | Response Code: 200
+2025-12-12 12:51:30,297 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/kfXgo2rMF1A19celCwLyQ4Xwpf8.jpg","id":1218925,"title":"Chainsaw Man - The Movie: Reze Arc","original_title":"劇場版 チェンソーマン レゼ篇","overview":"In a brutal war between devils, hunters, and secret enemies, a mysterious girl named Reze has stepped into Denji's world, and he faces his deadliest battle yet, fueled by love in a world where survival knows no rules.","poster_path":"/pHyxb2RV5wLlboAwm9ZJ9qTVEDw.jpg","media_type":"movie","original_language"
+2025-12-12 12:51:30,298 | INFO | GET Request → URL: https://api.themoviedb.org/3/trending/movie/week PARAMS: {'page': 10, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:31,378 | INFO | Response Code: 200
+2025-12-12 12:51:31,379 | INFO | Response Body: {"page":10,"results":[{"adult":false,"backdrop_path":"/jtOvTVlkF8TlaOq94oNXRc9u2yp.jpg","id":5255,"title":"The Polar Express","original_title":"The Polar Express","overview":"When a doubting young boy takes an extraordinary train ride to the North Pole, he embarks on a journey of self-discovery that shows him that the wonder of life never fades for those who believe.","poster_path":"/eOoCzH0MqeGr2taUZO4SwG416PF.jpg","media_type":"movie","original_language":"en","genre_ids":[16,12,10751,14],"popu
+2025-12-12 12:51:31,385 | INFO | Testing pagination for /movie/now_playing
+2025-12-12 12:51:31,385 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/now_playing PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:32,780 | INFO | Response Code: 200
+2025-12-12 12:51:32,782 | INFO | Response Body: {"dates":{"maximum":"2025-12-17","minimum":"2025-11-05"},"page":1,"results":[{"adult":false,"backdrop_path":"/5h2EsPKNDdB3MAtOk9MB9Ycg9Rz.jpg","genre_ids":[16,35,12,10751,9648],"id":1084242,"original_language":"en","original_title":"Zootopia 2","overview":"After cracking the biggest case in Zootopia's history, rookie cops Judy Hopps and Nick Wilde find themselves on the twisting trail of a great mystery when Gary De’Snake arrives and turns the animal metropolis upside down. To crack the case, Ju
+2025-12-12 12:51:32,782 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/now_playing PARAMS: {'page': 10, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:33,997 | INFO | Response Code: 200
+2025-12-12 12:51:33,997 | INFO | Response Body: {"dates":{"maximum":"2025-12-17","minimum":"2025-11-05"},"page":10,"results":[{"adult":false,"backdrop_path":"/jlqan4iTqliIjIRivtqDDRJh2H5.jpg","genre_ids":[35,36],"id":1175174,"original_language":"en","original_title":"Fackham Hall","overview":"A new porter embarks on an unlikely relationship with the youngest daughter of a prominent English family. Simultaneously, rivalries are spilling over in the Davenport family, led by the Lord and Lady as they also weather the epic failure of the wedding 
+2025-12-12 12:51:34,001 | INFO | Testing pagination for /movie/top_rated
+2025-12-12 12:51:34,001 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/top_rated PARAMS: {'page': 1, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:35,781 | INFO | Response Code: 200
+2025-12-12 12:51:35,783 | INFO | Response Body: {"page":1,"results":[{"adult":false,"backdrop_path":"/zfbjgQE1uSd9wiPTX4VzsLi0rGG.jpg","genre_ids":[18,80],"id":278,"original_language":"en","original_title":"The Shawshank Redemption","overview":"Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- i
+2025-12-12 12:51:35,784 | INFO | GET Request → URL: https://api.themoviedb.org/3/movie/top_rated PARAMS: {'page': 10, 'api_key': 'add494e96808c55b3ee7f940c9d5e5b6'}
+2025-12-12 12:51:37,869 | INFO | Response Code: 200
+2025-12-12 12:51:37,870 | INFO | Response Body: {"page":10,"results":[{"adult":false,"backdrop_path":"/foFq1RZWQIgFuCQ0nyYccywjFyX.jpg","genre_ids":[18,10749,36],"id":531428,"original_language":"fr","original_title":"Portrait de la jeune fille en feu","overview":"On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman.","popularity":6.6278,"poster_path":"/2LquGwEhbg3soxSCs9VNyh5VJd9.jpg","release_date":"2019-09-18","title":"Portrait of a Lady on Fire","vi
